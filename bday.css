@@ -1,0 +1,140 @@
+Body {
+  Display: flex;
+  Align-items: center;
+  Justify-content: center;
+  Height:100vh;
+  Background-color: #ffcccc;
+}
+
+.birthdayCard {
+  Position: relative;
+  Width: 250px;
+  Height:350px;
+  Cursor: pointer;
+  Transform-style: preserve-3d;
+  Transform: perspective(2500px);
+  Transition: 6s;
+
+}
+
+.birthdayCard:hover {
+  Transform: perspective(2500px) rotate(5deg);
+  Box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+}
+
+.birthdayCard:hover .cardFront {
+  Transform: rotateY(-160deg); 
+}
+
+.birthdayCard:hover .front-text {
+  Display: none;
+}
+
+
+.birthdayCard:hover .wrap-decoTwo {
+  Display: none;
+}
+
+.birthdayCard:hover .plate {
+  Display: none;
+}
+
+
+.cardFront {
+  Position: relative;
+  Background-color: #fff;
+  Width: 250px;
+  Height:350px;
+  Overflow: hidden;
+  Transform-origin: left;
+  Transition: 0.82s;
+}
+
+.happy, .toyou {
+  Position: relative;
+  Font-family: 'times new roman';
+  Text-align: center;
+  Backface-visibility: hidden;
+  Font-size: 23px; 
+}
+
+.happy {
+  Top:198px;
+}
+
+.toyou {
+  Top:155px;
+}
+
+.bday {
+  Position: relative;
+  Font-family:'tomes new roman';
+  Font-size: 25px;
+  Text-align: center;
+  Top:175px;
+}
+
+.sheik{
+  background-image:url("dubai.png");
+  position: relative;
+  width: 200px;
+  height: 200px;
+  bottom: 170px;
+}
+
+.leftPhoto {
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 3.5s ease;
+    transform: scaleX(-1);
+}
+
+
+.birthdayCard:hover .leftPhoto {
+  opacity: 1; 
+}
+
+.cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+}
+
+.inside-text {
+    position: relative;
+    top: -160px;
+    transform: scale(0.7);
+    z-index: 1; 
+}
+
+.wishes {
+    position: relative;
+    top: -100px;
+    margin: 25px;
+    z-index: 1; 
+}
+
+P {
+  Font-family: 'blackadder itc', cursive;
+  font-size: 16.5px;
+  Color: #333;
+
+}
+
+.name {
+  Margin-left:150px;
+}
+
