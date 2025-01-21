@@ -1,0 +1,245 @@
+Body {
+  Display: flex;
+  Align-items: center;
+  Justify-content: center;
+  Height:100vh;
+  background-image: linear-gradient(135deg,#021d27 10%,  #8b1b2c 100%);}
+
+.birthdayCard {
+  Position: relative;
+  Width: 250px;
+  Height:350px;
+  Cursor: pointer;
+  Transform-style: preserve-3d;
+  Transform: perspective(2500px);
+  Transition: 6s;
+
+}
+
+.birthdayCard:hover {
+  Transform: perspective(2500px) rotate(5deg);
+  Box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+}
+
+.birthdayCard:hover .cardFront {
+  Transform: rotateY(-160deg); 
+}
+
+.birthdayCard:hover .front-text {
+  Display: none;
+}
+
+
+.birthdayCard:hover .wrap-decoTwo {
+  Display: none;
+}
+
+.birthdayCard:hover .plate {
+  Display: none;
+}
+
+
+.cardFront {
+  Position: relative;
+  Background-color: #fff;
+  Width: 250px;
+  Height:350px;
+  Overflow: hidden;
+  Transform-origin: left;
+  Transition: 0.82s;
+}
+
+.happy, .toyou {
+  Position: relative;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  Text-align: center;
+  Backface-visibility: hidden;
+  Font-size: 23px; 
+}
+
+.happy {
+  Top:198px;
+}
+
+.toyou {
+  Top:155px;
+}
+
+.bday {
+  Position: relative;
+  Font-size: 23px;
+  Text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  Top:175px;
+}
+
+.sheik{
+  background-image:url("dubai.png");
+  position: relative;
+  width: 200px;
+  height: 200px;
+  bottom: 170px;
+}
+
+.leftPhoto {
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 3.5s ease;
+    transform: scaleX(-1);
+}
+
+
+.birthdayCard:hover .leftPhoto {
+  opacity: 1; 
+  visibility: visible;
+}
+
+.cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+}
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inside-text {
+    position: relative;
+    top: -160px;
+    transform: scale(0.7);
+    z-index: 1; 
+}
+
+.wishes {
+    position: relative;
+    top: -100px;
+    margin: 25px;
+    z-index: 1; 
+}
+
+P {
+  font-family: "Cedarville Cursive", serif;
+  font-size: 16.5px;
+  Color: #333;
+  line-height: 20px;
+
+}
+
+.name {
+  Margin-left:150px;
+}
+
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb); */
+  background-size: 400% 400%;
+  animation: backgroundAnimation 10s infinite ease-in-out;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* Animated Text */
+.animated-text {
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 20px #ff6f91, 0 0 40px #ff6f91, 0 0 60px #ff9a9e;
+  animation: textGlow 3s infinite ease-in-out, float 4s infinite ease-in-out;
+}
+
+/* Crackers */
+.falling-crackers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Individual cracker styles */
+.cracker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  transform: rotate(35deg);
+  /* border-radius: 50%; */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  animation: fall 5s linear infinite, sway 3s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 20px #ff6f91, 0 0 40px #ff9a9e, 0 0 60px #ff6f91;
+  }
+  50% {
+    text-shadow: 0 0 30px #fad0c4, 0 0 50px #fad0c4, 0 0 80px #fbc2eb;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
